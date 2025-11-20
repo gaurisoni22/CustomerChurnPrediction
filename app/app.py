@@ -22,8 +22,8 @@ st.set_page_config(page_title="Telecom Churn Predictor", page_icon="📡", layou
 # Load Model + Preprocessor
 # ---------------------------
 @st.cache_resource(show_spinner=False)
-def load_artifacts(model_path="best_model_xgb.pkl",
-                   preproc_path="preprocessor.pkl"):
+def load_artifacts(model_path="app/best_model_xgb.pkl",
+                   preproc_path="app/preprocessor.pkl"):
     model = joblib.load(model_path)
     preprocessor = joblib.load(preproc_path)
     return model, preprocessor
